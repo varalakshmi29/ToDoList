@@ -1,0 +1,165 @@
+/* General Styling */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f7f3fa;
+  color: #4a4a4a;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Main Container */
+.container {
+  max-width: 600px;
+  width: 90%;
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+}
+
+/* Header */
+h1 {
+  color: #6a5acd;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+/* Form Styling */
+form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+input[type="text"]:focus {
+  border-color: #b19cd9;
+}
+
+button {
+  padding: 10px 15px;
+  background-color: #6a5acd;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background-color: #836fff;
+  transform: scale(1.05);
+}
+
+/* Task List */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f8f5ff;
+  margin: 10px 0;
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: 1px solid #e0d7f5;
+}
+
+li:hover {
+  background: #ebe3ff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+li.completed span {
+  text-decoration: line-through;
+  color: #a8a8a8; /* Muted text for completed tasks */
+}
+
+/* Checkbox Styling */
+input[type="checkbox"] {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #28a745; /* Green border */
+  border-radius: 5px;
+  background-color: white;
+  display: grid;
+  place-content: center;
+  cursor: pointer;
+  flex-shrink: 0; /* Prevent resizing */
+}
+
+input[type="checkbox"]:checked {
+  background-color: #28a745;
+  border-color: #28a745;
+}
+
+input[type="checkbox"]:checked::after {
+  content: "✓"; /* Checkmark */
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* Editable Text Field */
+li input[type="text"] {
+  flex: 1;
+  padding: 5px;
+  font-size: 1rem;
+  border: 2px solid #b19cd9;
+  border-radius: 5px;
+}
+
+/* Task Text */
+li div span {
+  flex: 1;
+  text-align: left;
+  white-space: nowrap; /* Prevent text wrapping */
+}
+
+/* Buttons for Tasks */
+li button {
+  margin-left: 10px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+li button:first-of-type {
+  background-color: #836fff;
+  color: white;
+}
+
+li button:first-of-type:hover {
+  background-color: #6a5acd;
+}
+
+li button:last-of-type {
+  background-color: #f18181;
+  color: white;
+}
+
+li button:last-of-type:hover {
+  background-color: #ff4a4a;
+}
